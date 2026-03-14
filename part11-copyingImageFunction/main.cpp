@@ -27,7 +27,7 @@ cv::Mat copyImageFunc(cv::Mat img, cv::Mat &copyIm)
 int main()
 
 
-{
+{ 
 	string filePath = "C:/openCVimages/i5.jpg";
 	cv::Mat img = cv::imread(filePath);
 	cv::Mat copyIm;
