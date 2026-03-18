@@ -31,22 +31,23 @@ void mouseEvent(int event, int x, int y, int flags, void* userdata)
 	}
 }
 
-
+void mouseSetup()
+{
+	cv::Mat img = cv::Mat::zeros(cv::Size(640, 480), CV_8UC3);
+	cv::namedWindow("window");
+	cv::setMouseCallback("window", mouseEvent);
+	cv::moveWindow("window", 400, 200);
+	cv::imshow("window", img);
+	cv::waitKey();
+}
 
 
 int main()
 {
 	string filePath = "C:/openCVimages/i1.jpg";
 
-
-	cv::Mat img = cv::Mat::zeros(cv::Size(640, 480), CV_8UC3);
-	cv::namedWindow("window");
-
-	cv::setMouseCallback("window", mouseEvent);
-
-	cv::moveWindow("window", 400, 200);
-	cv::imshow("window", img);
-	cv::waitKey();
+	mouseSetup();
+	
 
 	return 0;
 }
