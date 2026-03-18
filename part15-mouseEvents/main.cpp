@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 void mouseEvent(int event, int x, int y, int flags, void* userdata)
 {
 	if (event == cv::EVENT_LBUTTONDOWN)
@@ -44,10 +42,6 @@ void mouseSetup()
 
 int main()
 {
-	string filePath = "C:/openCVimages/i1.jpg";
-
 	mouseSetup();
-	
-
 	return 0;
 }
